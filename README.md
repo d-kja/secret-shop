@@ -11,7 +11,6 @@ Secret shop is a simple script to re-roll the shop in E7, you might have to adju
 
 This package is the core of this script, but before installing it you need python installed. If you're not used to using Python and the terminal, there's a bunch of guides on the internet. Here's their website: [link](https://www.python.org/downloads)
 <br />
-<br />
 
 ```
 # Update Python's default package manager
