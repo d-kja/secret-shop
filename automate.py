@@ -11,7 +11,7 @@ bookmark = './sauce/bookmark.png'
 confirm_btn_bm = './sauce/confirm_btn_bm.png'
 
 confirm_offset = 800
-list_offset = 600
+list_offset = 650
 
 def find_bookmark():
     try:
@@ -49,6 +49,7 @@ def scroll():
     gui.moveTo(x + list_offset, y)
     gui.click(x + list_offset, y)
     gui.scroll(-10)
+    time.sleep(.5)
 
 def click(x, y):
     gui.click(x, y)
@@ -57,46 +58,49 @@ def refresh():
     x, y = find_refresh()
 
     gui.click(x, y)
-    time.sleep(500)
+    time.sleep(.5)
 
     x, y = find_confirm_refresh()
 
     gui.click(x, y)
-    time.sleep(500)
+    time.sleep(.5)
 
 def purchase(x, y):
+    time.sleep(.5)
     gui.click(x + confirm_offset, y)
 
 def purchase_bm():
+    time.sleep(.5)
     x, y = find_bookmark()
 
     if x != 0:
         purchase(x, y)
-        time.sleep(500)
+        time.sleep(.5)
 
         x, y = find_confirm_bm()
         click(x, y)
+        time.sleep(.5)
 
 def purchase_my():
+    time.sleep(.5)
     x, y = find_mystic()
 
     if x != 0:
         purchase(x, y)
-        time.sleep(500)
+        time.sleep(.5)
 
         x, y = find_confirm_my()
         click(x, y)
+        time.sleep(.5)
 
 print("[INFO] Starting in 5 seconds, focus the application")
-time.sleep(5000)
+time.sleep(5)
 
 counter = 0
-limit = 2
+limit = 10
 
 while True:
     try:
-        counter++
-
         if counter > limit:
             break
 
@@ -110,7 +114,8 @@ while True:
 
         refresh()
 
-        print("[INFO] Round:", counter + 1)
+        counter+=1
+        print("[INFO] Round:", counter)
 
     except:
         print("[WARN] Image not found, retrying...")
