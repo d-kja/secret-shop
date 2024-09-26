@@ -5,7 +5,6 @@ Secret shop is a simple script to re-roll the shop in E7, you might have to adju
 <br />
 
 ## Dependencies
-<br />
 
 ### PyAutoGui
 
