@@ -38,6 +38,7 @@ Remember to replace the `[YOUR-USER]` with your actual user and the `[SOME-WEIRD
 ```
 pip install opencv-python
 ```
+<br />
 
 ## How to use
 
@@ -46,6 +47,7 @@ Oh that's simple, just open a terminal and change the folder to the one containi
 ```
 cd Downloads/secret-shop
 ```
+<br />
 
 Then run the following and click on the game window with the shop open
 
