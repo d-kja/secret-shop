@@ -1,4 +1,5 @@
 import pyautogui as gui
+import msvcrt
 import time
 
 refresh_btn = './sauce/refresh_btn.png'
@@ -49,7 +50,7 @@ def scroll():
     gui.moveTo(x + list_offset, y)
     gui.click(x + list_offset, y)
     gui.scroll(-10)
-    time.sleep(.5)
+    time.sleep(.35)
 
 def click(x, y):
     gui.click(x, y)
@@ -63,44 +64,50 @@ def refresh():
     x, y = find_confirm_refresh()
 
     gui.click(x, y)
-    time.sleep(.5)
+    time.sleep(.25)
 
 def purchase(x, y):
-    time.sleep(.5)
+    time.sleep(.25)
     gui.click(x + confirm_offset, y)
 
 def purchase_bm():
-    time.sleep(.5)
+    time.sleep(.25)
     x, y = find_bookmark()
 
     if x != 0:
         purchase(x, y)
-        time.sleep(.5)
+        time.sleep(.25)
 
         x, y = find_confirm_bm()
         click(x, y)
-        time.sleep(.5)
+        time.sleep(.25)
 
 def purchase_my():
-    time.sleep(.5)
+    time.sleep(.25)
     x, y = find_mystic()
 
     if x != 0:
         purchase(x, y)
-        time.sleep(.5)
+        time.sleep(.25)
 
         x, y = find_confirm_my()
         click(x, y)
-        time.sleep(.5)
+        time.sleep(.25)
 
 print("[INFO] Starting in 5 seconds, focus the application")
 time.sleep(5)
 
 counter = 0
-limit = 10
+image_not_found_count = 0
+limit = 200
 
 while True:
     try:
+        if msvcrt.kbhit():
+            key = msvcrt.getch().decode()
+            if key == 'q':
+                break
+
         if counter > limit:
             break
 
@@ -115,9 +122,15 @@ while True:
         refresh()
 
         counter+=1
+        image_not_found_count = 0
         print("[INFO] Round:", counter)
 
     except:
         print("[WARN] Image not found, retrying...")
+        image_not_found_count += 1
+
+        if image_not_found_count > 5:
+            raise 
+
         pass
 
