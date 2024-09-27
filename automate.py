@@ -111,6 +111,12 @@ while True:
         if counter > limit:
             break
 
+        if image_not_found_count > 5:
+            print("[ERROR] Unable to find proper image, refreshing")
+            image_not_found_count = 0
+
+            refresh()
+
         purchase_bm() 
         purchase_my() 
 
@@ -128,9 +134,6 @@ while True:
     except:
         print("[WARN] Image not found, retrying...")
         image_not_found_count += 1
-
-        if image_not_found_count > 5:
-            raise 
 
         pass
 
