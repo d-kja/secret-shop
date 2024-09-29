@@ -1,5 +1,5 @@
 import pyautogui as gui
-import msvcrt
+import msvcrt as win
 import time
 
 refresh_btn = './sauce/refresh_btn.png'
@@ -103,11 +103,12 @@ limit = 200
 
 while True:
     try:
-        if msvcrt.kbhit():
-            key = msvcrt.getch().decode()
-            if key == 'q':
+        if win.kbhit():
+            key = win.getch().decode('ASCII')
+            
+            if key == "q" or key == "Q":
                 break
-
+        
         if counter > limit:
             break
 
