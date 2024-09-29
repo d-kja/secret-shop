@@ -8,6 +8,7 @@ Secret shop is a simple script to re-roll the shop in E7, you might have to adju
 
 Open a terminal and run the .py file with the game open and **visible** with the Secret shop open, as I'm using OpenCV with Pillow it takes screenshots of your screen to find the elements in the sauce folder. You aren't going to be able to use your mouse for a while, so it's something that you start and leave it running while you do some chores. You can change the amount of loops/runs that the script does by changing the `limit` variable/field in the `automate.py` file
 <br />
+<br />
 
 ## Dependencies
 
