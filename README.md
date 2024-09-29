@@ -4,12 +4,6 @@ Secret shop is a simple script to re-roll the shop in E7, you might have to adju
 <br />
 <br />
 
-## How to use
-
-Open a terminal and run the .py file with the game open and **visible** with the Secret shop open, as I'm using OpenCV with Pillow it takes screenshots of your screen to find the elements in the sauce folder. You aren't going to be able to use your mouse for a while, so it's something that you start and leave it running while you do some chores. You can change the amount of loops/runs that the script does by changing the `limit` variable/field in the `automate.py` file
-<br />
-<br />
-
 ## Dependencies
 
 ### PyAutoGui
@@ -48,7 +42,9 @@ pip install opencv-python
 
 ## How to use
 
-Oh that's simple, just open a terminal and change the folder to the one containing the script and do the following. Let's say mine is inside the `Downloads` folder
+Open a terminal and change the folder to the one containing the script that ends with `.py` and do the following. Let's say mine is inside the `Downloads` folder
+
+Small remimder, the game needs to be open and **visible** with the Secret shop open as well, as I'm using OpenCV with Pillow it takes screenshots of your screen to find the elements in the sauce folder. You aren't going to be able to use your mouse for a while, so it's something that you start and leave it running while you do some chores. You can change the amount of loops/runs that the script does by changing the `limit` variable/field in the `automate.py` file
 
 ```
 cd Downloads/secret-shop
