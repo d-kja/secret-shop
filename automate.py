@@ -16,14 +16,14 @@ list_offset = 650
 
 def find_bookmark():
     try:
-        x, y = gui.locateCenterOnScreen(bookmark, confidence=0.8)
+        x, y = gui.locateCenterOnScreen(bookmark, confidence=0.85)
         return x, y
     except:
         return 0, 0
 
 def find_mystic():
     try:
-        x, y = gui.locateCenterOnScreen(mystic, confidence=0.8)
+        x, y = gui.locateCenterOnScreen(mystic, confidence=0.85)
         return x, y
     except:
         return 0, 0
@@ -50,7 +50,7 @@ def scroll():
     gui.moveTo(x + list_offset, y)
     gui.click(x + list_offset, y)
     gui.scroll(-10)
-    time.sleep(.35)
+    time.sleep(.5)
 
 def click(x, y):
     gui.click(x, y)
@@ -64,14 +64,14 @@ def refresh():
     x, y = find_confirm_refresh()
 
     gui.click(x, y)
-    time.sleep(.25)
+    time.sleep(.75)
 
 def purchase(x, y):
     time.sleep(.25)
     gui.click(x + confirm_offset, y)
 
 def purchase_bm():
-    time.sleep(.25)
+    time.sleep(.35)
     x, y = find_bookmark()
 
     if x != 0:
@@ -83,7 +83,7 @@ def purchase_bm():
         time.sleep(.25)
 
 def purchase_my():
-    time.sleep(.25)
+    time.sleep(.35)
     x, y = find_mystic()
 
     if x != 0:
