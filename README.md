@@ -31,7 +31,7 @@ So, for windows users it might look like the following path:
 
 Path: `C:\Users\[YOUR-USER]\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_[SOME-WEIRD-HASH]\LocalCache\local-packages\Python312\Scripts`
 
-Remember to replace the `[YOUR-USER]` with your actual user and the `[SOME-WEIRD-HASH]` with the hash that the python folder has in your computer. Just one thing though, I installed python with microsoft store, so your the steps that you need to take might be different.
+Remember to replace the `[YOUR-USER]` with your actual user and the `[SOME-WEIRD-HASH]` with the hash that the python folder has in your computer. Just one thing though, I installed python with microsoft store, so the steps that you need to take to achieve the same result might be different.
 
 <br />
 
